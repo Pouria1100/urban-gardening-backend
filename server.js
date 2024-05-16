@@ -1,6 +1,7 @@
 const express = require("express");
 const os = require("os");
 const cors = require("cors");
+const os = require('os');
 
 const app = express();
 const host = os.hostname();
@@ -29,6 +30,9 @@ app.post("/component", (req, res) => {
     
  });
 
-app.listen(8080, () => {
-  console.log(`Server is running on port 8080 on ${host}`);
-});
+ const PORT = process.env.PORT || 3000;
+ const HOST = os.hostname();
+
+ app.listen(PORT, () => {
+  console.log(`Server is listening on http://${HOST}:${PORT}`);
+})
