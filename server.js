@@ -1,7 +1,7 @@
 const express = require("express");
 const os = require("os");
 const cors = require("cors");
-const os = require('os');
+
 
 const app = express();
 const host = os.hostname();
