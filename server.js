@@ -2,7 +2,9 @@ const express = require("express");
 const os = require("os");
 const cors = require("cors");
 
+
 const app = express();
+
 
 app.use(express.json());
 
@@ -27,7 +29,6 @@ app.post("/component", (req, res) => {
   res.status(200).json({ success: true});
     
  });
- 
 
  const PORT = process.env.PORT || 3000;
  const HOST = os.hostname();
