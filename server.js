@@ -2,9 +2,7 @@ const express = require("express");
 const os = require("os");
 const cors = require("cors");
 
-
 const app = express();
-const host = os.hostname();
 
 app.use(express.json());
 
