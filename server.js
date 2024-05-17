@@ -10,6 +10,7 @@ app.use(cors({ origin: "*" }));
 
 
 let component = {};
+let readings = {};
 
 
 app.get("/component", (req, res) => {
@@ -27,6 +28,18 @@ app.post("/component", (req, res) => {
   res.status(200).json({ success: true});
     
  });
+
+app.post("/readings", (req, res) => {
+  readings = req.body;
+
+  res.status(200).json({ success: true});
+})
+ 
+app.get("/readings", (req, res) => {
+  readings = req.body;
+
+  res.status(200).json(readings);
+})
 
  const PORT = process.env.PORT || 3000;
  const HOST = os.hostname();
